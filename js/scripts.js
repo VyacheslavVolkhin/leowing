@@ -20,7 +20,11 @@ $(document).ready(function(){
 	  return this;
 	};
 
-	//popup block
+    //swipebox
+    $('[data-swipebox]').swipebox();
+    
+	
+    //popup block
 	$('.js-popup-wrap .js-btn-toggle').on('click', function() {
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
@@ -100,6 +104,54 @@ $(document).ready(function(){
 			$(this).addClass('active').next('.js-tab-content').slideDown(200);
 		}
 	})
+
+
+    //photos-slider-box
+    if (!!$('.photos-slider-box').offset()) {
+        $('.photos-slider-box .slider').slick({
+            dots: false,
+            slidesToShow: 1,
+            variableWidth: false,
+            infinite: true,
+            adaptiveHeight: false,
+            prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+            nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+        });
+    }
+
+
+    //gallery-slider-box
+    if (!!$('.gallery-slider-box').offset()) {
+        $('.gallery-slider-box .slider').slick({
+            dots: false,
+            slidesToShow: 3,
+            variableWidth: false,
+            infinite: false,
+            adaptiveHeight: false,
+            prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+            nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        prevArrow: false,
+                        nextArrow: false,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        prevArrow: false,
+                        nextArrow: false,
+                        dots: true,
+                    }
+                },
+            ]
+        });
+    }
 	
 });
 

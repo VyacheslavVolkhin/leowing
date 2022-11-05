@@ -1,9 +1,13 @@
 :root {
-	--clr-base: #000;
-	--clr-att: #f00;
+	--clr-base: #000000;
+	--clr-att: #F37021;
+	--clr-att-hover: #e5925f;
+	--clr-light: #e4e4e;
 
-	--min: 320px;
-	--max: 1200px;
+	--min: 360px;
+	--max: 1280px;
+    
+    --paddingContainer: 20px;
 
 	font-size: 10px;
 }
@@ -17,11 +21,15 @@
 			main styles
 \* ----------------------------------- */
 body {
-	color: var(--clr-base, #000);
+	color: var(--clr-base);
 	background: #fff;
+    font-size: 14px;
+    line-height: 17/14;
+    font-weight: 300;
 }
-p, ul, ol {
+p, ul, ol, table, blockquote, .bq-text {
 	position: relative;
+    margin-bottom: 12/14em;
 	img {
 		max-width: 100%;
 	}
@@ -29,24 +37,38 @@ p, ul, ol {
 		margin-bottom: 0 !important;
 	}
 }
-
 li {
 	position: relative;
+    padding-left: 18px;
+    &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 8/14em;
+        left: 0;
+        margin-top: -6px;
+        border-radius: 50%;
+        background-color: var(--clr-att);
+    }
 }
 a {
-	text-decoration: none;
-	color: var(--clr-att, #f00);
-	&:hover {
-		text-decoration: none;
-		color: var(--clr-att, #f00);
-	}
+    text-decoration: none;
+    color: var(--clr-att);
+    &:hover {
+        text-decoration: none;
+        color: var(--clr-att-hover);
+    }
 }
 a.link-main, .link-main {
-	text-decoration: none;
-	border-bottom: 1px solid;
-	&:hover {
-		border-bottom: none;
-	}
+    text-decoration: none;
+    border-bottom: 1px solid;
+    &:hover {
+    }
+}
+.link-phone {
+    white-space: nowrap;
 }
 h1, .h1-title,
 h2, .h2-title,
@@ -56,7 +78,83 @@ h5, .h5-title,
 h6, .h6-title {
 	display: block;
 	position: relative;
+    font-weight: bold;
+    margin: 1em 0;
     &:first-child {
         margin-top: 0;
+    }
+}
+.h1-title {
+    font-size: 22/14em;
+    line-height: 27/22;
+    font-weight: 600;
+}
+.text-att, .title-att {
+    color: var(--clr-att);
+}
+.text-light, .title-light {
+    color: var(--clr-light);
+}
+.text-center, .title-center {
+    text-align: center;
+}
+@media (max-width: 1399px) {
+    :root {
+        font-size: 9.5px;
+    }
+}
+@media (max-width: 1199px) {
+    :root {
+        font-size: 9px;
+    }
+}
+@media (max-width: 1023px) {
+    :root {
+        font-size: 8px;
+    }
+}
+@media (max-width: 767px) {
+    :root {
+        font-size: 7px;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --paddingContainer: 30px;
+    }
+    body {
+        font-size: 18px;
+        line-height: 24/20;
+    }
+    p, ul, ol, table, blockquote, .bq-text {
+        margin-bottom: 1em;
+    }
+    li {
+        padding-left: 24px;
+        &:before {
+            top: 0.6em;
+        }
+    }
+    .h1-title, h1 {
+        font-size: 52/20em;
+        line-height: 63/52;
+        font-weight: 500;
+        &.title-small {
+            font-size: 2em;
+            line-height: 49/40;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    :root {
+        --paddingContainer: 40px;
+    }
+    body {
+        font-size: 20px;
     }
 }
