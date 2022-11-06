@@ -1513,6 +1513,7 @@ body {
 .main-top-box {
   display: block;
   position: relative;
+  max-height: 808px;
 }
 .main-top-box.top-contacts {
   margin-bottom: 60px;
@@ -1520,20 +1521,29 @@ body {
 .main-top-box.top-contacts .img-title {
   width: 50%;
   max-width: 582px;
-  margin-top: -7%;
+  margin-top: -6.8%;
 }
 .main-top-box.top-project {
   margin-bottom: 60px;
 }
 .main-top-box.top-project .img-title {
   width: 68%;
-  margin-top: -6%;
+  margin-top: -6.4%;
+}
+.main-top-box.top-portfolio-in .img-title {
+  margin-top: -10%;
 }
 .main-top-box.top-portfolio {
   margin-bottom: 60px;
 }
+.main-top-box.top-portfolio .img-title {
+  margin-top: -8.1%;
+}
 .main-top-box.top-products {
   margin-bottom: 0;
+}
+.main-top-box.top-products .img-title {
+  margin-top: -8.2%;
 }
 .main-top-box:before {
   content: "";
@@ -1546,7 +1556,7 @@ body {
   position: absolute;
   top: 100%;
   right: var(--paddingContainer);
-  margin-top: -9%;
+  margin-top: -8.5%;
   z-index: 2;
   max-width: 590px;
 }
@@ -1798,6 +1808,34 @@ body {
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  .main-top-box.top-project .img-title {
+    width: 522px;
+    margin-top: -49.2px;
+  }
+  .main-top-box.top-main .img-title {
+    width: 422px;
+    margin-top: -65px;
+  }
+  .main-top-box.top-products .img-title {
+    width: 422px;
+    margin-top: -63px;
+  }
+  .main-top-box.top-portfolio .img-title {
+    width: 422px;
+    margin-top: -62px;
+  }
+  .main-top-box.top-portfolio-in .img-title {
+    width: 422px;
+    margin-top: -77px;
+  }
+  .main-top-box.top-project .img-title {
+    width: 522px;
+    margin-top: -49px;
+  }
+  .main-top-box.top-contacts .img-title {
+    width: 384px;
+    margin-top: -52px;
+  }
   .links-box + .form-box .frm-title:before {
     display: none;
   }
@@ -2110,14 +2148,16 @@ body {
     margin-bottom: 4em;
   }
   .main-top-box.top-contacts .img-title {
-    margin-top: -6%;
+    margin-top: -78px;
+    width: 582px;
   }
   .main-top-box.top-project {
     margin-bottom: 4em;
   }
   .main-top-box.top-project .img-title {
-    max-width: 41.75em;
-    margin-top: -5%;
+    width: 835px;
+    margin-top: -78px;
+    max-width: inherit;
   }
   .main-top-box.top-portfolio-in {
     margin-bottom: 1em;
@@ -2128,6 +2168,14 @@ body {
   }
   .main-top-box.top-portfolio {
     margin-bottom: 4em;
+  }
+  .main-top-box.top-portfolio .img-title {
+    width: 590px;
+    margin-top: -86px;
+  }
+  .main-top-box.top-products .img-title {
+    margin-top: -86px;
+    width: 590px;
   }
   .main-top-box .img-title {
     width: 41%;
@@ -2146,6 +2194,9 @@ body {
     height: 123px;
     max-height: inherit;
     left: 200px;
+  }
+  .main-tabs-box .tabs-menu li:first-child .btn.button-tab {
+    padding-left: 50px;
   }
   .form-box {
     margin-top: 4em;
@@ -2217,6 +2268,14 @@ body {
   .main-top-box .img-title {
     right: 50%;
     margin-right: -600px;
+  }
+  .main-tabs-box .tabs-menu li:first-child .btn.button-tab {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .main-tabs-box .tabs-menu li:first-child .btn.button-tab .button-title {
+    width: 494px;
   }
 }
 @media (min-width: 1440px) {
