@@ -182,11 +182,15 @@ select::-ms-expand {
         height: 24px;
         z-index: 20;
         cursor: pointer;
+        box-shadow: 0 0 6px fade(#000, 10);
+        border-radius: 50%;
+        background-color: #fff;
         &:before {
             background-image: url(../img/icons/arrow-slider.svg);
             background-size: 100% auto;
         }
         &:hover {
+            box-shadow: 0 0 6px fade(#000, 10);
         }
     }
     &.ico-arrow-next {

@@ -2488,10 +2488,18 @@ select::-ms-expand {
   height: 24px;
   z-index: 20;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
 }
 .btn-action-ico.ico-arrow:before {
   background-image: url(../img/icons/arrow-slider.svg);
   background-size: 100% auto;
+}
+.btn-action-ico.ico-arrow:hover {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 .btn-action-ico.ico-arrow-next:before {
   -webkit-transform: rotate(180deg);
