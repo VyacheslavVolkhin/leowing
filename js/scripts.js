@@ -22,6 +22,23 @@ $(document).ready(function(){
 
     //swipebox
     $('[data-swipebox]').swipebox();
+
+
+    //file input 
+    $('.frm-field-file .btn').on('click', function () {
+        $(this).parent().find('input').click();
+        return false;
+    })
+    $('.frm-field-file input[type=file]').on('change', function () {
+        let fileName = ('' + $(this).val());
+        
+        if (fileName == "") {
+            fileName = $(this).parent().find('.button-title').attr('data-title');
+            $(this).parent().removeClass('active').find('.button-title').html(fileName);
+        } else {
+            $(this).parent().addClass('active').find('.button-title').html(fileName);
+        }
+    });
     
 	
     //popup block

@@ -2799,6 +2799,17 @@ select::-ms-expand {
   font-size: 0;
   pointer-events: none;
 }
+.frm-field-file .btn {
+  max-width: 100%;
+}
+.frm-field-file .btn .button-title {
+  display: block;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 @media (max-width: 1023px) {
   .btn.button-submit.button-small {
     height: 24px;
