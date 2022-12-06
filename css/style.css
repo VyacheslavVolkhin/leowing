@@ -1238,10 +1238,9 @@ body {
   margin-bottom: 20px;
 }
 .articles-box .item-wrap {
-  margin-bottom: 43px;
-  margin-bottom: 4.3rem;
-  padding-bottom: 43px;
-  padding-bottom: 4.3rem;
+  margin-bottom: 66px;
+  margin-bottom: 6.6rem;
+  padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 .articles-box .title-outer-wrap {
