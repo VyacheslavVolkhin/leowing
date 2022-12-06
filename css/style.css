@@ -633,6 +633,10 @@ body {
   position: relative;
   color: var(--clr-base);
 }
+.item-tile-article-side .tile-date {
+  color: #a7a9ac;
+  display: block;
+}
 .item-tile-article-side:hover {
   color: var(--clr-att);
 }
