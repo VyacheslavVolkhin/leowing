@@ -1775,7 +1775,7 @@ body {
 .main-top-box.top-blog .img-title {
   margin-top: 0;
 }
-.main-top-box.top-blog + .page-full {
+.main-top-box.top-blog + .page-full > .nav-box:first-child {
   margin-top: -60px;
 }
 .main-top-box.top-products {
@@ -2244,7 +2244,7 @@ body {
     max-width: inherit;
     margin-top: 0;
   }
-  .main-top-box.top-blog + .page-full {
+  .main-top-box.top-blog + .page-full > .nav-box:first-child {
     margin-top: -16rem;
   }
   .main-top-box.top-portfolio-in .img-title.img-title-second {

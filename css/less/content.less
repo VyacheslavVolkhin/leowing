@@ -662,7 +662,9 @@
             margin-top: 0;
         }
         &+.page-full {
-            margin-top: -60px;
+            &>.nav-box:first-child {
+                margin-top: -60px;
+            }
         }
     }
     &.top-products {
@@ -1176,7 +1178,10 @@
                 margin-top: 0;
             }
             &+.page-full {
-                margin-top: -16rem;
+                //margin-top: -16rem;
+                &>.nav-box:first-child {
+                    margin-top: -16rem;
+                }
             }
         }
         &.top-portfolio-in {
